@@ -1,0 +1,12 @@
+.sl {
+    margin: 50px;
+}
+
+.sl__slide {
+    margin: 0 auto;
+    text-align: center;
+}
+.slick-slide {
+    text-align: center;
+}
+

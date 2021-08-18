@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доставка и оплата</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/laptop.css">
+    <link rel="stylesheet" href="/styles/mobile.css">
+    <link rel="stylesheet" href="/styles/tablet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="/styles/tablet_portrait.css">
+    <link rel="stylesheet" href="/styles/mobile_320.css">
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/modal.js"></script>
+    <link rel="stylesheet" href="/styles/modal.css">
+</head>
+
+<body>
+<?php echo view('header'); ?>  
+
+<main class="container">
+        <?php echo '<p class="path">'.$_SESSION['kroshki'].'</p>';?>  
+
+    <ul class="big_container">
+        <li class="noMargin_flexbox bordered">
+                <span class="delivery"><img class="table_icon" src="/images/delivery.png"/><b>Доставка и оплата</b></span>
+        </li>
+
+        <li class="noMargin_flexbox bordered">
+            <p>Доставка воздушных шаров осуществляется КРУГЛОСУТОЧНО по предварительной договоренности по г.Днепр и за его пределами + 40 км </p>
+        </li>
+        
+        <li class="noMargin_flexbox bordered">
+            <p>Минимального заказа на доставку 500 грн</p>
+        </li>
+        
+        <li class="noMargin_flexbox bordered">
+            <p>Срочные заказы доставляются в течении 2-3 часов с момента оформления заказа</p>
+        </li>
+        
+        <li class="noMargin_flexbox bordered">
+            <p>Доставка товаров для праздника осуществляется с помощью компании Новая почта по тарифам компании либо самовывозом</p>
+        </li>
+        
+        
+    </ul>
+
+    <ul class="padding big_container">
+        <li class="noMargin_flexbox bordered">
+            <span class="delivery"><img class="table_icon" src="/images/people.png"/><b>САМОВЫВОЗ</b></span>
+        </li>
+
+        <li class="noMargin_flexbox bordered"><p>Самовывоз осуществляется по адресу: Сергея Подолинского 26/1
+Увидеть наш адрес и проложить маршрут можно в разделе Контакты. 
+Удобная парковка возле офиса, для вывоза шаров
+Скидка на воздушные шары при самовывозе 5%
+Минимального заказа нет
+</p></li>
+        <li class="noMargin_flexbox bordered"><p>КАКОЕ Количество шаров вы сможете увезти?:
+Легковой автомобиль до 50 шаров размером 25-30 см
+На универсале либо кроссовере до 75 шаров
+Коробка с шарами помещается в автомобиль универсал и более крупные авто, при условии разложенного заднего сидения и пустого багажника
+</p></li>
+        <li class="noMargin_flexbox bordered"><p>ВАЖНО ЗНАТЬ: При перемещении шаров в автомобиле обзор будет сильно затруднен, так как шары закроют обзор зеркала заднего вида. </p></li>
+        <li class="noMargin_flexbox bordered"><p>На общественном транспорте можно увезти до 20 шаров</p></li>
+        <li class="noMargin_flexbox bordered"><p>В случае Самовывоза Обязательно приобретайте пакеты для транспортировки шаров. Это позволит избежать повреждений во время транспортировки и упростит Вам способ перемещения шаров</p></li>
+    </ul>
+    
+    
+
+    <ul class="padding big_container">
+        <li class="noMargin_flexbox bordered">
+            <span class="delivery"><img class="table_icon" src="/images/pay.png"/><b>ОПЛАТА</b></span>
+        </li>
+
+        <li class="noMargin_flexbox bordered"><p>Здесь текст который Вам нужен</p></li>
+    </ul>
+
+</main>
+
+<?php echo view('footer'); ?>  
+    <script src="/js/modal.js"></script>
+
+</body>
+</html>

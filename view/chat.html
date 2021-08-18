@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="styles/chat.css">
+</head>
+<body>
+<div class="chat-popup" id="myForm">
+    <form action="" class="form-container">
+        <h1>Чат</h1>
+
+        <label for="msg"><b>Напишите Ваше сообщение</b></label><br>
+        <label for="msg">Операторы онлайн</label>
+        <textarea placeholder="Введите сообщение..." name="msg" id="msg" required></textarea>
+
+        <button type="submit" class="btn">Отправить</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+    </form>
+</div>
+<script src="js/chat.js"></script>
+</body>
+</html>

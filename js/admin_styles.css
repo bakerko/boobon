@@ -1,0 +1,255 @@
+
+.navbar {
+    height: unset;
+    padding: 15px 0;
+}
+
+.main_sort {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 35px 0;
+}
+
+.categoty {
+    border: 1px solid lightgrey;
+    padding: 7px;
+    display: block;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+.description {
+    font-weight: normal;
+    padding: auto;
+    height: 70px;
+}
+
+.height {
+    max-height: 40px;
+}
+
+.title_icon {
+    padding: 10px 30px;
+}
+
+.small {
+    font-size: smaller;
+}
+
+.aside_adm {
+    width: 25%;
+    padding: 0 33px 28px;
+    margin: 0 126px 0 0;
+}
+
+.center {
+    width: 30%;
+}
+
+.color {
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+}
+
+.main_sort {
+    background-color: #f9f8f8;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.choice {
+    display: block;
+    margin: 5px;
+}
+
+.input {
+    border-radius: 5px;
+    width: 40%;
+    padding: 5px;
+}
+
+.black_button {
+    margin: 30px 0;
+    display: block;
+    font-size: large;
+    width: auto;
+    border-radius: 5px;
+}
+
+.fileToLoad {
+    margin: 10px;
+}
+
+legend {
+    display: contents;
+}
+
+.photos {
+    display: contents;
+}
+
+.to_delete {
+    width: 10%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.no_margin {
+    margin: 0;
+}
+.margin_top {
+    margin-top: 20px;
+}
+
+.table_line {
+    margin: 20px;
+}
+
+.accepted {
+    width: 2%;
+    margin-top: 30px;
+}
+
+.accepted_noMargin {
+    width: 11%;
+}
+
+.beige {
+    background-color: beige;
+}
+
+.bgOrderLine {
+    background-color: #d4acb530;
+}
+.input_for_edit {
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;
+}
+.adding_prod {
+    margin-bottom: 20px;
+}
+
+.q-ty_edit {
+    text-align: center;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    font-size: large;
+    padding: 10px;
+}
+.article {
+    margin-top: 80px;
+}
+.inline-block {
+    display: inline-block;
+    margin-top: 50px;
+    width: 100%;
+}
+.width20 {
+    width: 19%;
+}
+
+.width27 {
+    width: 27%;
+}
+
+.baloon {
+    width: 45px;
+    height: 45px;
+}
+.close_image {
+    padding: 27px 20px;
+}
+.status {
+    width: 9%;
+    margin-top: 30px;
+}
+.fa-times-circle {
+    cursor: pointer;
+}
+.quantity {
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+}
+.edit_input {
+    width: 20%;
+    height: 22px;
+    padding: 7px 5px;
+    border-radius: 4px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.width70 {
+min-width: 60%;
+}
+
+.popup {
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #1b6c21;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.left_side_chat {
+    float: left;
+    width: 50%;
+    background-color: #f9f8f8;
+    border-radius: 25px;
+    padding: 15px;
+	margin:3px;
+}
+.right_side_message {
+    float: right;
+    width: 50%;
+    text-align: end;
+    background-color: lavender;
+    border-radius: 25px;
+    padding: 15px;
+	margin:3px;
+}

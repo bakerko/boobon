@@ -1,0 +1,146 @@
+{
+    box-sizing: border-box
+;
+}
+.close_left {
+    left: -32px;
+}
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+}
+
+.chat-width {
+    width: 23%;
+}
+
+.send_button {
+    bottom: 10px;
+    right: 12px;
+    border: transparent;
+    background: none;
+    position: absolute;
+    cursor: pointer;
+	
+}
+
+.fa-arrow-circle-up {
+    font-size: 22px;
+}
+
+.msg {
+    text-align: left;
+    margin: 0;
+    font-size: 16px;
+}
+
+.form-container {
+    position: relative;
+}
+
+textarea {
+    border-radius: 5px;
+    display: block;
+    font-family: inherit;
+    padding: 5px;
+    width: 80%;
+}
+
+.chat_window {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: -285px;
+    top: -237px;
+    width: 100%;
+    height: 100%;
+}
+
+.chat-area {
+    height: 300px;
+    overflow-y: scroll;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    margin: 15px 0 15px;
+	overflow-x:  hidden;
+	border: transparent;
+}
+
+.form-container .btn {
+    cursor: pointer;
+}
+
+.smile {
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icons {
+    text-align: left;
+}
+
+.pin {
+
+    width: 15px;
+    height: auto;
+    cursor: pointer;
+}
+
+.form-container .cancel {
+    cursor: pointer;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+.left_side_chat {
+    float: left;
+    text-align: left;
+    /* width: 50%; */
+    min-width: 50%;
+    background-color: #f9f8f8;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 3px;
+}
+.right_side_message {
+    float: right;
+    min-width: 50%;
+    text-align: end;
+    background-color: lavender;
+    border-radius: 25px;
+    padding: 10px;
+	margin:3px;
+}
+
+@media (max-width: 768px) {
+    .chat-width {
+        width: 32%;
+    }
+}
+
+@media (max-width: 628px) {
+    .chat-width {
+        width: 53%;
+    }
+}
+
+@media (max-width: 376px) {
+    .chat-width {
+        width: 64%;
+    }
+    .msg {
+        font-size: 14px;
+    }
+}
