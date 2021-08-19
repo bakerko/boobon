@@ -534,6 +534,38 @@ class Home extends BaseController
         } 
 
         
+        public function search_admin()
+        {
+            
+            $this->access();
+            
+            $request = service('request');
+            
+            $search_text= $request->getVar('search_text');
+
+            
+
+            $data['category']=$this->model_main->get_category();
+
+            if(!isset($_SESSION['admin_product_filter1']))$_SESSION['admin_product_filter1']=0;
+            if(!isset($_SESSION['admin_product_filter2']))$_SESSION['admin_product_filter2']=1;
+            if(!isset($_SESSION['admin_product_filter3']))$_SESSION['admin_product_filter3']=1;
+            
+            $filters['filter1']=$_SESSION['admin_product_filter1'];
+            $filters['filter2']=$_SESSION['admin_product_filter2'];
+            $filters['filter3']=$_SESSION['admin_product_filter3'];
+
+            
+            $data['products']=$this->model_main->get_products_admin_search($filters, $search_text);
+            
+            $data['filter_groups']=$this->model_main->get_filter_groups();
+            $data['filters']=$this->model_main->get_filters();  
+
+
+            echo view('admin_product', $data);
+        }               
+        
+        
         public function admin_product()
         {
             

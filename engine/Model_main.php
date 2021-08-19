@@ -866,6 +866,50 @@ class Model_main extends Model
         return null;
     }
     
+    public function get_products_admin_search($filters, $search_text){
+        
+        $builder = $this->db->table('product');
+        
+        if($filters['filter1']){
+            $builder->where('category', $filters['filter1']);
+        }
+        
+        if($filters['filter2']==1){
+            $builder->where('deleted', 0);
+        }elseif($filters['filter2']==2){
+            $builder->where('deleted', 1);
+        }        
+
+        if($filters['filter3']==1){
+            $builder->orderBy('time', 'DESC');
+        }elseif($filters['filter3']==2){
+            $builder->orderBy('time', 'ASC');
+        }elseif($filters['filter3']==3){
+            $builder->orderBy('price', 'DESC');
+        }elseif($filters['filter3']==4){
+            $builder->orderBy('price', 'ASC');
+        }elseif($filters['filter3']==5){
+            $builder->orderBy('name', 'DESC');
+        }elseif($filters['filter3']==6){
+            $builder->orderBy('name', 'ASC');
+        } 
+        
+        $builder->like('descr', $search_text);
+        $builder->like('name', $search_text);
+        $builder->like('artikul', $search_text);
+        
+        $query = $builder->get();
+        
+        if($query->getResult()){
+            return $query->getResult();     
+        }
+        
+        return null;
+    }    
+    
+    
+    
+    
     public function get_product_mix(){
         
         $builder = $this->db->table('product');
