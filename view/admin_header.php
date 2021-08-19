@@ -6,7 +6,7 @@
         <div class="container flexbox flex_mob">
             <div><a href="/home/"><img class="logo" src="/images/logo.jpg"/></a></div>
             <div class="search_field">
-                <form id="search" method="post" action="/home/search">
+                <form id="search" method="post" action="/home/search_admin">
                     <input class="form-control" type="text" aria-label="Search" name="search_text">
                     <img onclick="document.getElementById('search').submit();" class="search_img" src="/images/search.png"/>
                 </form>
