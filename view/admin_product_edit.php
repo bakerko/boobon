@@ -134,6 +134,7 @@
                                             <input type="hidden" name="id" value="<?php echo $product->id;?>">
                                
             <p class="choice">Артикул</p><input type="text" name="artikul" value='<?php echo $product->artikul?>' style="width:200px;">
+            
             <p class="choice">Название</p><input type="text" name="name" value='<?php echo $product->name?>' style="width:200px;">
             <p class="choice">Описание</p><textarea  rows="10" cols="25" name="descr" ><?php echo $product->descr;?></textarea>
             <p class="choice">Цена</p><input type="text" name="price" value="<?php echo $product->price;?>">

@@ -629,6 +629,8 @@ class Home extends BaseController
             $data['filters_ids']= $request->getVar('filters_ids');    
             
             $data['name']= $request->getVar('name');
+            $data['artikul']= $request->getVar('artikul');
+            
             $data['price']= $request->getVar('price');
             $data['descr']= $request->getVar('descr');   
             $data['category']= $request->getVar('category');  

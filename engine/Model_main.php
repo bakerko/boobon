@@ -513,6 +513,7 @@ class Model_main extends Model
             'descr'  => $data['descr'],
             'price'  => $data['price'],
             
+            'artikul'  => $data['artikul'],
             'is_mix'  => $data['is_mix'],
             
             'size'  => $data['size'],
