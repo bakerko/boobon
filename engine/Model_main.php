@@ -870,6 +870,14 @@ class Model_main extends Model
         
         $builder = $this->db->table('product');
         
+        $builder->like('descr', $search_text);
+        $builder->orLike('name', $search_text);
+        $builder->orLike('artikul', $search_text);
+
+        //echo "search_text = $search_text";
+        
+        
+        
         if($filters['filter1']){
             $builder->where('category', $filters['filter1']);
         }
@@ -894,9 +902,7 @@ class Model_main extends Model
             $builder->orderBy('name', 'ASC');
         } 
         
-        $builder->like('descr', $search_text);
-        $builder->orLike('name', $search_text);
-        $builder->orLike('artikul', $search_text);
+
         
         $query = $builder->get();
         
