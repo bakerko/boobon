@@ -128,6 +128,14 @@
                     <li><a href="/home/show_catalog/40">Товары для праздника</a></li>
             </ul>
             <a href="#">Оформить мероприятие</a>
+             <ul class="submenu_side">
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+                    <li>&nbsp;</li>
+            </ul>
         </div>
         <p class=" mobile_only side_menu" onclick="openNav()">MENU</p>
 
