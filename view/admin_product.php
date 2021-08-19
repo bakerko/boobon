@@ -157,7 +157,8 @@
                 <legend>Картинка 4</legend>
                 <input class="fileToLoad" type="file" name="image4" id="fileToUpload">
             </div>          
-                
+            
+            <p class="choice">Артикул </p><input class="input" type="text" name="artikul">
             <p class="choice">Название </p><input class="input" type="text" name="name">
             <p class="choice">Описание</p><input class="input" type="text" name="descr">
             <p class="choice">Цена</p></legend><input class="input" type="text" name="price" value="0">
