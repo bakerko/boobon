@@ -895,8 +895,8 @@ class Model_main extends Model
         } 
         
         $builder->like('descr', $search_text);
-        $builder->like('name', $search_text);
-        $builder->like('artikul', $search_text);
+        $builder->orLike('name', $search_text);
+        $builder->orLike('artikul', $search_text);
         
         $query = $builder->get();
         
