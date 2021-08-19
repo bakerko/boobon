@@ -122,6 +122,8 @@
                 <div class="description noMargin_flexbox tablet_description mob_desrc pos_relative" style="padding-left:20px;padding-right:20px;">
                     <p>'.$delivery.'</p>
                     <p>'.$item->adress.'</p>
+                        <p>'.$item->date.'</p>
+                            <p>'.$item->time.'</p>
                 </div>
             </div>
             ';
