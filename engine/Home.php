@@ -730,6 +730,9 @@ class Home extends BaseController
             $data['descr']= $request->getVar('descr');   
             $data['category']= $request->getVar('category');  
             
+            if(isset($request->getVar('artikul')))
+             $data['artikul']= $request->getVar('artikul'); 
+            
             $data['filters_ids']= $request->getVar('filters_ids');   
             
             $data['size']= $request->getVar('size');

@@ -441,6 +441,7 @@ class Model_main extends Model
             'category'  => $data['category'],
             'size'  => $data['size'],
             'material'  => $data['material'],
+            'artikul'  => $data['artikul'],
             'country'  => $data['country']                
         ];
 
