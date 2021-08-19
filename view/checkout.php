@@ -67,7 +67,7 @@
                                 оператором</p><br>
                             <input class="left_item input_item" id="start" type="date" name="date"
                                    value="2020-01-01"
-                                   min="2020-01-01" max="2020-12-31">
+                                   min="2020-01-01" max="2022-12-31">
 
                             <input class="left_item input_item" id="appt-time" type="time" name="time"
                                    value="12:00"></br>
