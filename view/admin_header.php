@@ -11,12 +11,7 @@
                     <img onclick="document.getElementById('search').submit();" class="search_img" src="/images/search.png"/>
                 </form>
             </div>
-            <a href="/home/cart">
-                <div class="cart_box">
-                    <img class="cart" src="/images/Cart.png" height="450" width="450"/>
-                    <p><b>: <b id="total_price_head"><?php if(isset($_SESSION['total_price'])){echo $_SESSION['total_price'];}else{echo 0;}?></b>&nbsp; грн</b></p>
-                </div>
-            </a>
+           
         </div>
     </div>
 </header>
