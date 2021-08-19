@@ -1,7 +1,8 @@
 
 <body>
 <header>
-
+     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+     
     <div class="search_block">
         <div class="container flexbox flex_mob">
             <div><a href="/home/"><img class="logo" src="/images/logo.jpg"/></a></div>

@@ -1,4 +1,6 @@
 <header>
+     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    
     <nav class="top_nav">
         <div class="top_nav_bar container">
             <ul class="menu__box mob_menu">

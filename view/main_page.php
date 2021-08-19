@@ -22,7 +22,33 @@
 </head>
 <body>
     
+    <style>
 
+        main .slick-prev:hover, main .slick-next:hover{
+            background-color:transparent;
+            color:transparent;
+        }
+        
+        .slick-prev, .slick-next {
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            top: 30%;
+            display: block;
+            width: 40px;
+            height: 60px;
+            padding: 0;
+            -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            cursor: pointer;
+            color: transparent;
+            border: none;
+            outline: none;
+            background: transparent;
+        }        
+
+    </style>
     
 <?php echo view('header'); ?>  
 
