@@ -120,6 +120,9 @@
 <?php echo view('footer');
 
 ?>  
+    
+<script src="/js/modal.js"></script>
+<script src="/js/chat.js"></script>    
 
 </body>
 </html>
