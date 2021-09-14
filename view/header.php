@@ -1,5 +1,8 @@
 <header>
-     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="/favicon.ico" rel="icon">
+     
     
     <nav class="top_nav">
         <div class="top_nav_bar container">

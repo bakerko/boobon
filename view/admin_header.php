@@ -1,6 +1,10 @@
 
 <body>
 <header>
+
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="/favicon.ico" rel="icon">    
+    
      <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
      
     <div class="search_block">
