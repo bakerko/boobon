@@ -44,7 +44,7 @@ defined('DOC_ROOT') || define('DOC_ROOT', '/home/hsjwxfld/public_html/public');
 
 defined('CHECK_ONE_PRICE') || define('CHECK_ONE_PRICE', 20);
 defined('CHECK_TWO_PRICE') || define('CHECK_TWO_PRICE', 20);
-defined('MAIN_MAIL') || define('MAIN_MAIL', "boobon.com.ua@gmail.com");
+defined('MAIN_MAIL') || define('MAIN_MAIL', "boobon.dp@gmail.com");
 defined('PASS') || define('PASS', "admin18052018");
 
 /*

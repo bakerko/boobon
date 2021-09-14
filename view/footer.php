@@ -56,7 +56,7 @@
         <ul class="footer_landscape_item">
             <li class="title">КОНТАКТЫ</li>
             <li class="footer_link"><a class="blackbar__item" href="tel:+38 (096) 207 84 83"><i class="fas fa-phone"></i> +38 (096) 020 21 55</a></li>
-            <li class="footer_link"><a class="blackbar__item" href=""><i class="fas fa-envelope"></i> dariabubna@gmail.com</a>
+            <li class="footer_link"><a class="blackbar__item" href=""><i class="fas fa-envelope"></i> boobon.dp@gmail.com</a>
             </li>
             <li class="footer_link insta_link"><a class="blackbar__item button" href=""><img class="colored_icon"
                                                                                              src="/images/instagram-sketched.png"
