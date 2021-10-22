@@ -177,6 +177,7 @@
 
             </div>          
                 
+            <p class="choice">Артикул </p><input class="input" type="text" name="artikul">
             <p class="choice">Название </p><input class="input" type="text" name="name">
             <p class="choice">Описание</p><input class="input" type="text" name="descr">
             <input type="hidden" name="price" value="0">

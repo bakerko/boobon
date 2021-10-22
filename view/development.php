@@ -33,7 +33,7 @@
     
 <?php $this->load->view('footer'); ?>    
     
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="/slick/slick.min.js"></script>
 <script src="/js/slick.js"></script>
 <script src="/slick/slick.js"></script>
