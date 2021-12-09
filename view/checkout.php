@@ -37,7 +37,7 @@
                                 <input name="name" class="input_item" type="text" size="40">
                             </p>
                             <p>Ваш телефон<br>
-                                <input name="phone" class="input_item" type="text" size="40">
+                                <input id="phone" name="phone" class="input_item" value="+3 80" type="text" size="40">
                             </p>
                         
                     </li>
@@ -65,9 +65,16 @@
                             <br>
                             <p class="text_reg">Выберите дату и желаемое время доставки. Условия доставки подтверждаются
                                 оператором</p><br>
+                            
+                            
+                            <?
+                                $today = date("Y-m-d");  
+                            ?>
+                            
+                            
                             <input class="left_item input_item" id="start" type="date" name="date"
-                                   value="2020-01-01"
-                                   min="2020-01-01" max="2022-12-31">
+                                   value="<?echo $today;?>"
+                                   min="<?echo $today;?>" max="2022-12-31">
 
                             <input class="left_item input_item" id="appt-time" type="time" name="time"
                                    value="12:00"></br>
@@ -101,7 +108,10 @@
 
 
 <?php echo view('footer'); ?>  
+    
+
     <script src="/js/modal.js"></script>
+
 
 </body>
 </html>

@@ -74,6 +74,9 @@ class Home extends BaseController
        echo view('xml_resp', $data);  
    }
    
+   function update_all_prices(){
+       $this->model_main->update_all_prices();
+   }
    
    function admin_product_mix(){
        
@@ -88,7 +91,9 @@ class Home extends BaseController
             $filters['filter3']=$_SESSION['admin_product_mix_filter3'];
             
 
-            $data['products']=$this->model_main->get_products();
+            //$data['products']=$this->model_main->get_products();
+            
+            $data['products']=$this->model_main->get_products_all();
        
        $data['category']=$this->model_main->get_category();
        
@@ -176,7 +181,7 @@ class Home extends BaseController
     
     
     public function add_default_product($id, $price, $type){
-        $this->access();
+        //$this->access();
 
         if($type){
             $_SESSION['prices'][$id]=$price;
@@ -865,7 +870,10 @@ class Home extends BaseController
             
             $catalog_ids[]=$id;
             
-            $t_filter =$_SESSION['catalog_filter'];
+            $t_filter=1;
+            if(isset($_SESSION['catalog_filter']))
+                $t_filter =$_SESSION['catalog_filter'];
+            
             
             //$data['products']=$this->model_main->get_products_from_catalogs($catalog_ids);
             $data['products']=$this->model_main->get_products_from_catalogs_with_filters($catalog_ids, $t_filter);
@@ -885,7 +893,9 @@ class Home extends BaseController
             
             $data['filter_groups']=$this->model_main->get_filter_groups();//get_category
             
-            $t_filter =$_SESSION['catalog_filter'];
+            $t_filter=1;
+            if(isset($_SESSION['catalog_filter']))
+                $t_filter =$_SESSION['catalog_filter'];
             
             $catalog_ids=array(21,22,23,24,25);
             $data['products']=$this->model_main->get_products_from_catalogs_with_filters($catalog_ids, $t_filter);
@@ -902,7 +912,10 @@ class Home extends BaseController
             
             $data['filter_groups']=$this->model_main->get_filter_groups();//get_category
            
-            $t_filter =$_SESSION['catalog_filter'];
+            $t_filter=1;
+            if(isset($_SESSION['catalog_filter']))
+                $t_filter =$_SESSION['catalog_filter'];
+            
             $catalog_ids=array(26,27,28,29,30,31,32);
             $data['products']=$this->model_main->get_products_from_catalogs_with_filters($catalog_ids, $t_filter);
             $data['products_filters']=$this->model_main->get_products_filters($data['products']);
@@ -918,7 +931,10 @@ class Home extends BaseController
             
             $data['filter_groups']=$this->model_main->get_filter_groups();//get_category
            
-            $t_filter =$_SESSION['catalog_filter'];
+            $t_filter=1;
+            if(isset($_SESSION['catalog_filter']))
+                $t_filter =$_SESSION['catalog_filter'];
+            
             $catalog_ids=array(33,34,35,36,37,38);
             $data['products']=$this->model_main->get_products_from_catalogs_with_filters($catalog_ids, $t_filter);
             $data['products_filters']=$this->model_main->get_products_filters($data['products']);
@@ -934,7 +950,11 @@ class Home extends BaseController
             
             $data['filter_groups']=$this->model_main->get_filter_groups();//get_category
             
-            $t_filter =$_SESSION['catalog_filter'];
+            $t_filter=1;
+            if(isset($_SESSION['catalog_filter']))
+                $t_filter =$_SESSION['catalog_filter'];
+            
+            
             $catalog_ids=array(39,40);
             $data['products']=$this->model_main->get_products_from_catalogs_with_filters($catalog_ids, $t_filter);
             $data['products_filters']=$this->model_main->get_products_filters($data['products']);
@@ -1146,7 +1166,7 @@ class Home extends BaseController
                             $link4='<a href="/home/show_catalog/'.$tmo_catalog_id.'">Открытки</a>';
                             break;  
                         case 37:
-                            $link4='<a href="/home/show_catalog/'.$tmo_catalog_id.'">Подарочные пакеты</a>';
+                            $link4='<a href="/home/show_catalog/'.$tmo_catalog_id.'">Хлопушки</a>';
                             break;  
                         case 38:
                             $link4='<a href="/home/show_catalog/'.$tmo_catalog_id.'">Сервировка</a>';

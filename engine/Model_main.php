@@ -243,6 +243,7 @@ class Model_main extends Model
         $produc_ids=array();
         $produc_quantity=array();
         
+        if($mix_products)
         foreach ($mix_products as $mix){
             $produc_ids[]=$mix->product_id;
             $produc_quantity[$mix->product_id]=$mix->quant;
@@ -281,8 +282,13 @@ class Model_main extends Model
     }
     
     
+    function update_all_prices(){
+        $this->update_price_all_mix();
+    }
     
     public function get_product_mix_admin($filters){
+        
+        $this->update_price_all_mix();
         
         $builder = $this->db->table('product');
         
@@ -328,6 +334,20 @@ class Model_main extends Model
         
         return null;        
     }
+    
+    function update_price_all_mix(){
+        $builder = $this->db->table('product');
+        $builder->where('is_mix', 1);
+        $query = $builder->get();   
+
+        if($query)
+        if($query->getResult()){
+            foreach ($query->getResult() as $row){
+               $this->update_mix_price($row->id); 
+            }   
+        }
+    }
+    
     
     public function get_product_mix_products_one($mix_id){
         $builder = $this->db->table('product_mix_products');
@@ -726,7 +746,58 @@ class Model_main extends Model
         $builder->set('deleted', 1);
         $builder->where('id', $id);
         $builder->update();  
+        
+         
+        
+        $this->delete_from_mixed($id);
+       
+
+        
+        $product=$this->get_product_by_id($id);
+        if($product->deleted)
+            $this->delete_final($id);
+        
+        
+        //проверка на deleted=1
+        //удаление из всех mixed товаров
+        //скрипт, который удалит все удаленные товары из миксованых
     }  
+    
+    function get_product_by_id($id){
+        $builder = $this->db->table('product');
+        $query = $builder->where('id', $id);
+        $query = $builder->get();
+        
+        if($query->getResult()){
+            foreach ($query->getResult() as $row){
+                return $row;
+            }     
+        }       
+    }
+    
+    function delete_from_mixed($id){
+        $builder = $this->db->table('product_mix_products');
+        $builder->where('product_id', $id);
+        $builder->delete();           
+    }
+    
+    function get_deleted_products(){
+        
+    }
+    
+    function delete_final($id){
+        
+        $builder = $this->db->table('product');
+        $builder->where('id', $id);
+        $builder->delete();  
+
+        
+    }
+    
+    
+    
+    
+    
     
     
     public function order_delete($id){
@@ -922,6 +993,8 @@ class Model_main extends Model
         $builder->where('is_mix', 1);
         $builder->where('deleted', 0);
         
+        $builder->orderBy('name', 'DESC');
+        
         $query = $builder->get();
         
         if($query->getResult()){
@@ -946,6 +1019,18 @@ class Model_main extends Model
         
         return null;
     }
+    
+    public function get_products_all($id=0){
+        
+        $builder = $this->db->table('product');
+        $query = $builder->get();
+        
+        if($query->getResult()){
+            return $query->getResult();     
+        }
+        
+        return null;
+    }    
     
     public function products_search($text){
         
