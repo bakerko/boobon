@@ -175,6 +175,7 @@
         <div class="tablet_cart cart_item">
             <div class="description height beige noMargin_flexbox tablet_description mob_desrc pos_relative">
                 <b class="center  ">Картинка</b>
+                <b class="center  ">Артикул</b>
                 <b class="center ">Название</b>
                 <b class="center ">Цена</b>
 
@@ -209,6 +210,7 @@
             
             <div class="description noMargin_flexbox tablet_description mob_desrc pos_relative">
                 <a href="/home/product_edit/<?php echo $product->id;?>" style="cursor:ponter;"><img class="baloon baloon_small" src="<?php echo $image;?>"/></a>
+                <p class="center mob_title" style="width:10%;"><?php echo $product->artikul;?></p>
                 <p class="center mob_title"><?php echo $product->name;?></p>
                 <p class="center mob_title"><?php echo $product->price;?> грн.</p>
 

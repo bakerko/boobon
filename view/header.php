@@ -24,7 +24,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <nav class="top_nav">
         <div class="top_nav_bar container">
             <ul class="menu__box mob_menu">
-                <li><a class="menu__item" href="/home">Товары</a></li>
                 <li><a class="menu__item" href="/home/delivery_payment">Доставка и оплата</a></li>
                 <li><a class="menu__item" href="/home/faq">Вопросы и ответы</a></li>
                 <li><a class="menu__item" href="/home/warranty">Гарантии и возврат</a></li>
@@ -64,9 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             <div>
                 <a href="/home/"><img class="logo" src="/images/logo.jpg"/></a>
-                <p>
-                    Круглосуточная доставка шаров
-                </p>
+
             </div>
             
 

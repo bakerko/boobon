@@ -44,7 +44,8 @@ $(document).ready(function() {
 			});
 
 			//console.log(filter_mas_int);
-			
+                        
+/*вариант фильров && (и)
 			checked.find(function (element, index, array){
 
 					if(filter_mas_int.indexOf(Number(element))<0){
@@ -52,7 +53,20 @@ $(document).ready(function() {
 					}
 
 			});
-			
+ */                        
+                        
+
+////////////////////////// Вариант фильтров || (или)      
+
+			flag_visible=0;
+			checked.find(function (element, index, array){
+
+					if(filter_mas_int.indexOf(Number(element))>=0){
+						flag_visible=1;
+					}
+
+			});	
+                        
 			if(flag_visible){
 				$(this).show();
 			}else{

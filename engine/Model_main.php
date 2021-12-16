@@ -133,6 +133,7 @@ class Model_main extends Model
         
         $builder = $this->db->table('filters');
         $query = $builder->whereIn('id', $tmp_ids);
+        $builder->orderBy('name', 'ASC');
         $query = $builder->get();   
         
         if($query)

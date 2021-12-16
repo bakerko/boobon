@@ -72,7 +72,7 @@
     <article>
         <div class="tablet_cart cart_item">
             <div class="description height beige noMargin_flexbox ">
-                <b class="center">Дата</b>
+                <b class="center">На когда</b>
                 <b class="center">Имя клиента</b>
                 <b class="center">Контактный телефон</b>
                 <b class="center">Сумма</b>
@@ -98,10 +98,10 @@
             
             echo '
 
-                        
+
                 <div class="tablet_cart cart_item " onclick="showBox(\'order_'.$item->id.'\');">
                     <div class="description bgOrderLine noMargin_flexbox pointer">
-                        <p class="center">'.$tmp_data.'</p>
+                        <p class="center">'.$item->date.' '.$item->time.'</p>
                         <p class="center">'.$item->name.'</p>
                         <p class="center">'.$item->phone.'</p>
                             <p class="center">'.$item->sum.'</p>
@@ -122,8 +122,8 @@
                 <div class="description noMargin_flexbox tablet_description mob_desrc pos_relative" style="padding-left:20px;padding-right:20px;">
                     <p>'.$delivery.'</p>
                     <p>'.$item->adress.'</p>
-                        <p>'.$item->date.'</p>
-                            <p>'.$item->time.'</p>
+                    <p>'.$tmp_data.'</p>
+
                 </div>
             </div>
             ';
