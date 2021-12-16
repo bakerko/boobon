@@ -106,7 +106,8 @@
                         Купить
                     </button>
                 
-                    <button onclick="add_product_from_mix_js('<?php echo $product->id;?>'); show_popup('<?php echo $product->name;?>');" class="button cart_button" style="width:250px;"><img class="button_icon invert_color" src="/images/Cart-1.png"/><div style="margin-left:-11px;"><span style="font-size:13px;">Добавить товары в корзину</span> <p>РАЗДЕЛЬНО</p></div></button>
+                    <button onclick="add_product_from_mix_js('<?php echo $product->id;?>'); show_popup('<?php echo $product->name;?>');" class="button cart_button" style="width:250px;">
+                        <img class="button_icon invert_color" src="/images/Cart-1.png"/><div style="margin-left:-11px;">Товар раздельно</div></button>
             </div>
             <hr>
             <div>
