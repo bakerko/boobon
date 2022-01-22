@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<?
+    echo view('header'); 
+?>    
+        
+    
 <head>
     <meta charset="UTF-8">
     <title>Product Card</title>
@@ -21,7 +27,7 @@
 
 <body>
 <?php 
-    echo view('header'); 
+
 
     $product_quant=array();
     
@@ -71,6 +77,21 @@
         $link5=' / <a href="/home/product_card_mix/'.$product->id.'">'.$product->name.'</a>';
         $_SESSION['kroshki'].=$link5;
     }
+    
+    
+    
+    echo '<script>
+      var dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        \'event\': \'view_item\',
+        \'value\': \''.$product->price.'\',
+        \'items\':[{
+          \'id\': \''.$product->id.'\',
+          \'google_business_vertical\': \'retail\'
+        }]
+      });
+    </script>
+    ';       
 ?>  
 
 <main class="container">

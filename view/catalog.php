@@ -13,9 +13,7 @@
     <link rel="stylesheet" href="/styles/tablet_portrait.css">
     <link rel="stylesheet" href="/styles/mobile_320.css">
     <script src="/js/sidebar.js"></script>
-    <script src="/js/modal.js"></script>
-    <script src="/js/filters.js"></script>   
-    <script src="/js/cart.js"></script>    
+
     <link rel="stylesheet" href="/styles/modal.css">
 </head>
 
@@ -123,6 +121,9 @@
     
 <script src="/js/modal.js"></script>
 <script src="/js/chat.js"></script>    
+
+<script src="/js/filters.js"></script>   
+<script src="/js/cart.js"></script>    
 
 </body>
 </html>

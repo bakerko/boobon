@@ -30,6 +30,93 @@
     </ul>
 
  
+<?
+
+    if(isset($products)){
+        echo '
+
+            <script>
+                gtag(\'event\', \'purchase\', {
+                  "transaction_id": "24.031608523954162",
+                  "affiliation": "Google online store",
+                  "value": '.$total_price.',
+                  "currency": "UAH",
+                  "tax": 1.24,
+                  "shipping": 0,
+                  "items": [
+                  ';
+
+
+        foreach($products as $product){
+
+            $product->quant=$cart_list[$product->id];
+            echo  '
+
+                {
+                  "id": "'.$product->id.'",
+                  "name": "'.$product->name.'",
+                  "list_name": "Search Results",
+                  "brand": "MyBrand",
+                  "category": "Apparel/T-Shirts",
+                  "variant": "Red",
+                  "list_position": 2,
+                  "quantity": '.$product->quant.',
+                  "price": \''.$product->price.'\'
+                },
+
+            ';
+
+        }
+
+        echo '           
+                    ]
+                  });
+
+            </script>
+        ';
+    }
+
+
+
+if(isset($products)){
+        echo '
+
+            <script>
+            var dataLayer = window.dataLayer || [];
+            dataLayer.push({
+              \'event\': \'purchase\',
+              \'value\': \''.$total_price.'\',
+              \'items\': [
+                  ';
+
+
+        foreach($products as $product){
+
+            $product->quant=$cart_list[$product->id];
+            echo  '
+                
+                {
+                      \'id\': \''.$product->id.'\',
+                      \'google_business_vertical\': \'retail\'
+                },
+
+            ';
+
+        }
+
+        echo '           
+                    ]
+                  });
+
+            </script>
+        ';
+    }
+
+?>    
+    
+    
+
+
 
 </main>
 

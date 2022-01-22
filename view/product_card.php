@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+    
+<?
+    echo view('header'); 
+?>    
+    
+    
 <head>
     <meta charset="UTF-8">
     <title>Product Card</title>
@@ -14,7 +21,7 @@
     <script src="/js/sidebar.js"></script>
     <script src="/js/modal.js"></script>
     
-    <script src="/js/cart.js"></script>
+
     
 
     <link rel="stylesheet" href="/styles/modal.css">
@@ -25,7 +32,7 @@
 <body>
 <?php 
 
-    echo view('header'); 
+
 
     $product=0;
     
@@ -66,6 +73,21 @@
         $link5=' / <a href="/home/product_card/'.$product->id.'">'.$product->name.'</a>';
         $_SESSION['kroshki'].=$link5;
     }
+    
+    
+echo '<script>
+  var dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    \'event\': \'view_item\',
+    \'value\': \''.$product->price.'\',
+    \'items\':[{
+      \'id\': \''.$product->id.'\',
+      \'google_business_vertical\': \'retail\'
+    }]
+  });
+</script>
+';    
+    
     
 ?>  
 
@@ -153,7 +175,7 @@
 </main>
 <?php echo view('footer'); ?>  
     <script src="/js/modal.js"></script>
-
+    <script src="/js/cart.js"></script>
 
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
