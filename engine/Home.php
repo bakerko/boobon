@@ -410,12 +410,41 @@ class Home extends BaseController
         
  	public function checkout_done()
 	{
+            $data['cart_list']= $_SESSION['products'];
+            $data['total_price']=$_SESSION['total_price'];
+            
             unset($_SESSION['total_price']);
             unset($_SESSION['products']);
             unset($_SESSION['puckage']);
+            
+            if(count($data['cart_list'])>0){
+                $reqest_ids;
+                foreach($data['cart_list'] as $key=>$val){
+                    $reqest_ids[]=$key;
+                }
+                
+                $products = $this->model_main->get_products_by_ids($reqest_ids);   
+            }
+            
+            $data['products']=$products;
+            
+            $this->model_main->get_products_by_ids($data['cart_list']);            
+            
              
-            echo view('checkout_done');
-	}            
+            echo view('checkout_done', $data);
+	}   
+        
+ 	public function feed_xml()
+	{
+
+            $products = $this->model_main->get_products_all();   
+ 
+            $data['products']=$products;
+            
+            $this->response->setHeader('Content-Type', 'text/xml');
+        
+            echo view('feed_xml', $data);
+	}        
         
  	public function checkout()
 	{

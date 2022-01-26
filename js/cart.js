@@ -9,6 +9,20 @@
 	
 	
 	function add_product_js(id, price, quant){
+            
+            
+                var dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                  'event': 'add_to_cart',
+                  'value': price,
+                  'items':[{
+                    'id': id,
+                    'google_business_vertical': 'retail'
+                  }]
+                });
+
+            
+            
 		let xhr = new XMLHttpRequest();
 		
 		xhr.onreadystatechange = function() {
