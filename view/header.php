@@ -136,12 +136,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <li><a href="/home/show_catalog/38">Сервировка</a></li>
                 </ul>
              </li>
-            <li><a style="cursor:pointer;" class="blackbar__item submenu_link" <?if(!strripos($self_url, 'show_menu4')){echo 'href="/home/show_menu4"';}?>><img class="nav_icon star" src="/images/star.svg"/>
+            <li><a style="cursor:pointer;" class="blackbar__item submenu_link" href="/home/show_catalog/39"><img class="nav_icon star" src="/images/star.svg"/>
                 Готовые решения</a>
-                <ul class="submenu">
-                    <li><a href="/home/show_catalog/39">Воздушные шары</a></li>
-                    <li><a href="/home/show_catalog/40">Товары для праздника</a></li>
-                </ul>
+
             </li>
             <li id="myBtn" class="btn ipad_button"><a class="blackbar__item button colorblack" href="#"> Оформить
                 мероприятие</a>
@@ -192,11 +189,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li><a href="/home/show_catalog/37">Хлопушки</a></li>
                 <li><a href="/home/show_catalog/38">Сервировка</a></li>
             </ul>
-            <a href="/home/show_menu4">Готовые решения</a>
-            <ul class="submenu_side">
-                    <li><a href="/home/show_catalog/39">Воздушные шары</a></li>
-                    <li><a href="/home/show_catalog/40">Товары для праздника</a></li>
-            </ul>
+            <a  href="/home/show_catalog/39">Готовые решения</a>
+
             <a id="myBtn_side2" href="#">Оформить мероприятие</a>
              <ul class="submenu_side">
                     <li>&nbsp;</li>
