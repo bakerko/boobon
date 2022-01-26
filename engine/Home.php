@@ -351,6 +351,16 @@ class Home extends BaseController
             $data['doc_root']=$_SERVER["DOCUMENT_ROOT"];
 
             
+            $data['names']=[
+                'products1'=>'С Любовью',
+                'products2'=>'Для детей',
+                'products3'=>'Для нее',
+                'products4'=>'Для него',
+                'products5'=>'На выписку',
+                'products6'=>'На девичник'
+            ];
+            
+            
             $catalog_ids=array(21,22,23,24,25);
             $data['products1']=$this->model_main->get_products_from_catalogs($catalog_ids);     
             
@@ -363,12 +373,53 @@ class Home extends BaseController
             $catalog_ids=array(39,40);            
             $data['products4']=$this->model_main->get_products_from_catalogs($catalog_ids);     
 
+            $catalog_ids=array(53,111);            
+            $data['products5']=$this->model_main->get_products_from_catalogs($catalog_ids);    
+
+            $catalog_ids=array(79);            
+            $data['products6']=$this->model_main->get_products_from_catalogs($catalog_ids);    
+            
             echo view('main_page', $data);   
         }
         
   	public function test()
 	{
-		echo view('test');
+            
+            $data['doc_root']=$_SERVER["DOCUMENT_ROOT"];            
+            
+            $data['names']=[
+                'products1'=>'С Любовью',
+                'products2'=>'С Днём Рождения',
+                'products3'=>'Для детей',
+                'products4'=>'Для нее',
+                'products5'=>'Для него',
+                'products6'=>'На выписку',
+                'products7'=>'На девичник'
+            ];            
+
+
+            $catalog_ids=array(122, 99);
+            $data['products1']=$this->model_main->get_products_by_tags($catalog_ids);     
+            
+            $catalog_ids=array(109);
+            $data['products2']=$this->model_main->get_products_by_tags($catalog_ids);     
+            
+            $catalog_ids=array(80, 112, 113,100,78,77,97);
+            $data['products3']=$this->model_main->get_products_by_tags($catalog_ids);     
+            
+            $catalog_ids=array(95, 79);            
+            $data['products4']=$this->model_main->get_products_by_tags($catalog_ids);     
+            
+            $catalog_ids=array(118,78,119,77,96);            
+            $data['products5']=$this->model_main->get_products_by_tags($catalog_ids);               
+
+            $catalog_ids=array(53,111);            
+            $data['products6']=$this->model_main->get_products_by_tags($catalog_ids);    
+
+            $catalog_ids=array(79);            
+            $data['products7']=$this->model_main->get_products_by_tags($catalog_ids);   
+            
+            echo view('main_page', $data);   
 	}        
         
  	public function development()

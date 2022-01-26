@@ -18,7 +18,21 @@ class Model_main extends Model
         mail(MAIN_MAIL, $subject, $message);        
     }
             
-            
+    public function get_products_by_tags($tag_ids){
+        $builder = $this->db->table('product_filter');
+        $query = $builder->whereIn('filter_id', $tag_ids);
+        $query = $builder->get();
+        
+        $product_ids=array();
+        
+        if($query)
+        if($query->getResult()){
+            foreach($query->getResult() as $match)
+                $product_ids[]=$match->product_id;
+        }
+        
+        return $this->get_products_by_ids($product_ids);           
+    }        
 
     
     public function get_products_filters_one($product){
