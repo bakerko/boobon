@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
                 <div class="cart_box" >
                     <img class="cart" src="/images/Cart.png" style="width:90px; height:90px;"/>
-                    <p><b>: <b id="total_price_head"><?php if(isset($_SESSION['total_price'])){echo $_SESSION['total_price'];}else{echo 0;}?></b>&nbsp; грн</b></p>
+                    <p><b>: <b id="total_price_head" style="font-size: 22px;"><?php if(isset($_SESSION['total_price'])){echo $_SESSION['total_price'];}else{echo 0;}?></b>&nbsp; грн</b></p>
                 </div>
             </a>
         </div>

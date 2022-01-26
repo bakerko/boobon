@@ -18,7 +18,7 @@ class Model_main extends Model
         mail(MAIN_MAIL, $subject, $message);        
     }
             
-    public function get_products_by_tags($tag_ids){
+    public function get_products_by_tags_and_category($tag_ids, $category){
         $builder = $this->db->table('product_filter');
         $query = $builder->whereIn('filter_id', $tag_ids);
         $query = $builder->get();
@@ -31,9 +31,23 @@ class Model_main extends Model
                 $product_ids[]=$match->product_id;
         }
         
-        return $this->get_products_by_ids($product_ids);           
+        return $this->get_products_by_ids_and_category($product_ids, $category);           
     }        
 
+    
+    public function get_products_by_ids_and_category($produc_ids, $category){
+        $builder = $this->db->table('product');
+        $query = $builder->whereIn('id', $produc_ids);
+        $query = $builder->where('category', $category);
+        $query = $builder->get();
+        
+        if($query)
+        if($query->getResult()){
+            return $query->getResult();     
+        }
+        
+        return null;            
+    }    
     
     public function get_products_filters_one($product){
 
